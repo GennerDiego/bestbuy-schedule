@@ -20,7 +20,7 @@ const run = async () => {
   if (x.overview.caAvailability.shipping.status === 'InStock') {
     await send()
   }
-  logger.info('Status: ' + x.overview.caAvailability.shipping.status + ' ' + moment().format('YYYY-MM-DD HH:mm:ss'))
+  logger.info('Status: ' + x.overview.caAvailability.shipping.status + ' ' + moment().utcOffset(-3).format('YYYY-MM-DD HH:mm:ss'))
 }
 
 run()
