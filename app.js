@@ -1,5 +1,5 @@
 var express = require('express')
-const schedule = require('node-schedule')
+// const schedule = require('node-schedule')
 const { requisicao, send } = require('./fluxo.js')
 const moment = require('moment')
 const logger = require('heroku-logger')
@@ -13,7 +13,7 @@ app.listen(port, function () {
   logger.info(`Aplicação em pé!`)
 })
 
-schedule.scheduleJob('*/5 * * * *', async () => {
+const run = async () => {
   const x = await requisicao()
   // SoldOutOnline
   // InStock
@@ -21,4 +21,15 @@ schedule.scheduleJob('*/5 * * * *', async () => {
     await send()
   }
   logger.info('Status: ' + x.overview.caAvailability.shipping.status + ' ' + moment().format('YYYY-MM-DD HH:mm:ss'))
-})
+}
+
+run()
+// schedule.scheduleJob('*/5 * * * *', async () => {
+//   const x = await requisicao()
+//   // SoldOutOnline
+//   // InStock
+//   if (x.overview.caAvailability.shipping.status === 'InStock') {
+//     await send()
+//   }
+//   logger.info('Status: ' + x.overview.caAvailability.shipping.status + ' ' + moment().format('YYYY-MM-DD HH:mm:ss'))
+// })
