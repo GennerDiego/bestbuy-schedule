@@ -2,7 +2,7 @@
   "name": "bestbuy-schedule",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "app.json",
   "scripts": {
     "start": "node app.js",
     "dev": "node --inspect-brk app.js",
