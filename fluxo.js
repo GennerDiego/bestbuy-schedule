@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 
 var mailOptions = {
   from: 'gennerdiego@gmail.com',
-  to: 'gennerdiego@gmail.com; viviane.orge@gmail.com',
+  to: 'gennerdiego@gmail.com',
   subject: 'JOGO EM ESTOQUE',
   text: 'https://www.bestbuy.ca/en-ca/category/nintendo-switch-consoles/3457140.aspx?'
 }
