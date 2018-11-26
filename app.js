@@ -1,17 +1,17 @@
-var express = require('express')
+// var express = require('express')
 // const schedule = require('node-schedule')
 // const { requisicao, send } = require('./fluxo.js')
 // const moment = require('moment')
-const logger = require('heroku-logger')
-var port = process.env.PORT || 3000
-var app = express()
+// const logger = require('heroku-logger')
+// var port = process.env.PORT || 3000
+// var app = express()
 
-app.get('/', function (req, res) {
-  res.send(JSON.stringify({ Hello: 'World' }))
-})
-app.listen(port, function () {
-  logger.info(`Aplicação em pé!`)
-})
+// app.get('/', function (req, res) {
+//   res.send(JSON.stringify({ Hello: 'World' }))
+// })
+// app.listen(port, function () {
+//   logger.info(`Aplicação em pé!`)
+// })
 
 // const run = async () => {
 //   const x = await requisicao()
